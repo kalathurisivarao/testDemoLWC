@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Create Resource Record">
+        <div class="slds-p-horizontal--small">
+            <template if:true={resAvaiInValues.data} >
+                <lightning-combobox label="Availability in" value={resAvailabilityIn} options={resAvaiInValues.data.values} onchange={handleAvailabilityInChange} access-key={index} id={index}></lightning-combobox>
+            </template>
+            <div class="slds-m-top_small">
+                <lightning-button variant="brand" label="Save" onclick={handleSaveClick}></lightning-button>
+            </div>
+        </div>
+    </lightning-card>
+</template>
